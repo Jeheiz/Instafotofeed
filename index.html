@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instagram Feed</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <!-----------------------------NAVEGADOR------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
+            <div class="container-fluid">
+                <div class="col-3 offset-1">
+                    <i class="fa fa-instagram col-1" aria-hidden="true"></i>
+                    <a class="navbar-brand col-2" href="#">Instagram</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="col-3 offset-8">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">
+                                    <a class="btn btn-success text-white" data-toggle="modal"
+                                        data-target="#modalnewpost">Crear nuevo post</a>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-cog pt-3" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-----------------MODAL--------------->
+                    <div class="modal fade" id="modalnewpost" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="row modal-body">
+                                        <textarea class="w-100"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-light border-secondary mx-1 px-2 py-1 ml-3"><i class="fa fa-camera" aria-hidden="true"></i></button>
+                                        <button class="btn btn-light border-secondary px-2 py-0 pt-1"><h5><i class="fa fa-map-marker" aria-hidden="true"></i></h5></button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Publicar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-light text-secondary" id="home-tab" data-toggle="tab"
+                            href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-th" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bg-light text-secondary" id="post-tab" data-toggle="tab"
+                            href="#post" role="tab" aria-controls="post" aria-selected="false"><i class="fa fa-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <img class="col-4 p-0" src="https://cdn-img-n.facciabuco.com/85/20zesi4to5-l-albero-cattura-la-luna-buonasera-chiacchiera_b.jpg?c=1">
+                        <img class="col-4 pr-1 pl-1" src="https://www.corriere.it/methode_image/2018/09/25/Tecnologia/Foto%20Tecnologia%20-%20Trattate/full-moon-green-corn-moonjpg-acaba1298aacc3dd-kFEI-U3030752849079NuG-656x492@Corriere-Web-Sezioni.jpg">
+                        <img class="col-4 p-0" src="https://viaggiatore.net/wp-content/uploads/2019/01/luna-gialla..jpg">
+                    </div>
+                    <div class="row">
+                        <img class="col-4 p-0 pt-1 pb-1" src="https://media-assets.ad-italia.it/photos/633c639416e6f449adcc3ccc/master/w_1600,c_limit/kym-mackinnon-a0wxZkzM9eE-unsplash.jpg">
+                        <img class="col-4 pr-1 pl-1 pt-1 pb-1" src="https://images.pexels.com/photos/1432669/pexels-photo-1432669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                        <img class="col-4 p-0 pt-1 pb-1" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTEhMVFRUXFxUXGBcXGBUVGBoYFxcYFxUXFxgYHSggGBolGxUXITEiJSkrLi4uFx81ODMsNygtLisBCgoKDg0OFRAPFS0dHR0rOC0rLSstLTgtLSstKy0tKystKy0rLTgtKystKzctLSsrLS0tLSsrLS0rLS0tLSsrK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAgMBBQYEBwj/xAA9EAACAQIEBAMGBAQDCQAAAAAAAQIDEQQhMUESUWFxBYGRBhMiobHwBzLB0UJSguEzYrIUI0NykqKzw/H/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGREBAQEBAQEAAAAAAAAAAAAAAAERMRIC/9oADAMBAAIRAxEAPwD4cWJZZPujFOF2Wp9FfZAecE5yXLMgAAAAAACcaeV3kRsXqDas/IBw7qzIueWi1/cxUdrJdyEptgYk7mAAAAAAFlOCYGaLya0ZKDaTuRlUafYzWmmgIymvN6lYAAAAACcabYECdJq+ZmGSb5OwcU8726ATeuWXNldSd+xipK7IgAAAAAAGUgBdw5LNEZ1O1+Zio8kuRWAAAAAADKRgtoW8wJxez1Kc0y2L8ktblU5XAzUncgAAAAAA93hMVx5tpdMvK+wEKPhlaX5aVRrXKEnl5IjXpuLtJONtmmn6M+oeBV7cKVtEr2tlzf3mdXhZRmuGcVJcpJST73JrXl8ArNeZUffMZ+Hvh+JX+C6M3/FRfDb+n8nyOJ9pfwjxdG88LJYmC/hXw1Uv+XSX9Lv0EsTHzkEqlNxbjJNNNppqzTWqaejIlQALKMQIcL5FkleKtsT94r2MVcs0BGjvyK30JSqNkAAAAAADMVcvUEVUnmWVIXAy6SBni6GQPKAAAAAE1TZG3QsrLR7AI2STte4UFrfIQ/LnoVASnK7IgAAAABKEbl3u0BBOyTW5t/AKCk3ffflplbnr6GqeWTzRufAZKN7Z8VvJq/rkSjrsCnHK+n35HSYW639L2ema6Gh8LtJu2ium+vTnk16o6PDytd262W21l0MOkbfw+vNNZnR0cRfU5fA1FrfsbfC1SDx+1nsbhvEI3qR4K1rRrRtx5bS2muj8mj4P7WeyuIwFX3daPwu/BUX5Jrmns+cXmvRn6UTzTWRDxTw2jiqUqFenxwks1yfOL1jJc0alSx+UidOVjovbv2Qq+HV+CV5Up3dKp/Mlqnykrq689zmjbD0ZXv8AMqqSIAAAAAAAAm1ZWaz5kABJTZEAS43zBEAAAALqMdyktpSAnGabsRm+F5aPYylvoVTlcBOdyIAAAAAABZRZKUM79ikn7xgWVM8jceCw+FPf+7/t6dTRcR0ngtCSzlkuG6T16Pprl58iVY6ShXtFRTvnm+d9jb4Gu1ldvoaChUzdtLm6wf0MtRv8DUbmksvvM3WDpyUr6nKxlunozr/B53j8Wv3+xFbWEd/keqkrq+55qc7dluXRktvL+5B5PaTwOlj8PPD1lrnCerhNflmu18+abW5+YPGPDKmGr1KFZWqU5OMltzTT3TTTXRn6xoNLc+Zfjv7MKdKGPpr4qdqdXrBv/dy7qTt2kuRr5rNj4eADbIAABKEbkbF6snbZoBZWzeWxVOFtyyUlnnfkikAAAAAAAnTXLbYjN3YGAAAAAAAABYE6cXqgMTtsRLqlPdFTVgMAAC3DvPM6LA1r29M88v8A7mc3S19fob/B0ZJLqSrHRYOlzyyVnbb9Td0qMopJrVXTWd79jVeHwlJJPa2vp9PobavUtZLJPvf7yMtPRRbtkrd/0OhwGJSgrNv6/epzOHk27X00ue6nUt+UYOxwFZTSWd09dux7K6cFfe+/393OY8JxvC3xJ2djqpVPeUrJ3t9oivHSxzi83/Y2uJwsMTh6lCecasJQfaStfur38jnJxd7b3Oiw0HGFuXrZ6fUD8m4/CSo1alKf5qc5Ql3i3F/NFB2n4vYRQ8TqSWSqxhVt1a4Z+soSfmcWdI5iLbJa6kIwfYv4U1zAxNciNSbVu3QjUk78rEGwMNgAAAAAAAuhBJ9RPhfT9TLllndFU5XAiAAAAAAzFXLY01pcCuCuy2KVu18ho9F3ITnrkgM1H6lQAAAAW4aSUlluvvsdf4PTTsuf6K/6HIYaF5Ludr4JC2fOyXPPPyzUSVY6nAYa0U7apd9/2XzJ4mjpJq+pLBy+FLZZ2++puqeC49dNcvvlb1MtNJBXWW31PVRpXPRiPDuC1ne+xtvCsNFQvJXbt5LsB5MAuGWWf6G+oYn3esrp/I8EsNGmuKN7+pTJ889f3/UiunUU81a/P6FmGqtytbT6mi8MqzVk27bI3WGk9d738tiD4/8Aj7hVGvhpWzlCpF/0yTX+tnyyEbn1j8fql54Tp/tH/pPldNq1rZ/U6TjF6le6a+ZTGTTLOPK/oilsqMtmAAAAAEqcbslCncmqds0BBzXIyZ+F5gCpswAAAAAAsp89gFFPVFnu0nfYhUzStoYjWdrAY948yAAAAAACdON9dgJ4VPiVl+muh3Phb4aijL4lGPEns3FpNPpdrvbY4vBtOVktcrc80dr4YnHV3u5X8rK3zeXoSrHWYKXE/p659zosBdfC7JZ5+VvTVeaOYwrssnpZq3NO/wB9zovD5X8/tow2lUwj/M+y/sbDCJZJ+aZdUScOLq7Llqvvua1zbld5AbPFUcvhzT7aZamsUXe3U3MF8CTetnyb3yK54dJcV9Ob3siCeBwcmr5JLM2dG9zzYSfw2vqe6g7sD4l+OmKj7/DUnrGnUm/66nCv/EfMU0tHc7H8XPElW8Tr2zjT4aUWv8i+L/vlP0OKOk4xegAKgAAAAA9D0yFNtLMqjUsHUAjPVgwAAAAAylcmqedmBWi+VrLfkRaT0yZiWStvcCU5tLr+hSGAAAAAGY6oCyNIyo2z1W5Kd7ZGYyyzAu8Ow/FUXC1zV3bdZN7HXeFy4lFx+K9+mnTb4nryaOIwslF8Tvk1bLfrt5bne+DrJaKLjGW/+JJuUlb+VStblmSrHT4GjzdlbLvZ2fT+6Nx4bUeyz187tf6UaTAJytl1tvkt+nxI6LCJcvPtq3bzRhttqcbLP075lSwaebdu3yJUq2t839WeuEb5kGaUHaPNGaOHbnZ6ZntwsL9y6eHs79vXIo8joJSy2yM+NeKU8JhauJnZqnTckuctIR7uTS8y/wBy20nkz5B+OftMpThgKTvGm1Os1/Pb4IeSd31kuQR8pxFaU5SnJ3lJuTfNt3b9WVgHRgAAAlBLfQiXU4PR6AUsE5U2QAAAAAAASMxRe2kgIUt1uQje/Uvkrq6KvfdFcBWtfLzKwwAAAAAko5XAiAALFV5mJVLkAB6MEry4deKytzzVjucDK01d3U7NPm5pNKb0WUVbu1c4PDJcSvdcrZZ7Z7Z7naeEVG4pSs1wqc91GbmlTS5uzTy0d+hKsdngF8fxZTUbcnw3Sa7Xt8uhu8JTdtvv6o0WFTcm283JJyy+JWukr6Livpn6Zb7CO6V9rfsYbbKhC9v0PfQ6dTz4SC5+p7FUS0z18unqQe7CS4Vyb2LZV77W5Gvj1y6mm9rPamjgaLnVd5SvwU01xza5LaKvm9vRAR9v/bCHh9Byi06801SjrnvJr+WN79clufm7EV5VJynNuUpNylJ6uTd235s9vj/jVbF15V60rylotoxWkYrZL9+ZrjcmMWgANIAnCFy1U10YFUFvyZa1y336GFLJ5eRVKV9rAJvZaEQAAAAAADMWXNJlAAunKyKQAAAAAAAXOF1pZilH1tkS6XfcDzglKbepEAAAMo7T2dqtxSvmoLPVaXTel8pZ2toltnxR1PsnUlOpqnJyyTbVnxRbko6LZ5L+G2WpKsfRfDLZdk/2+VzfYWLt89ttDT+H8F7yajwt3TaT/K/hms7ZPY2D8fwdGMfeYilG1suJN25JRu36bmG29pRef3boeqMZJff1PnXiv4r4WCaoUqlWW3ElTh5t3k/+lHz/ANo/brG4u8Z1OCm/+HT+GNuUnrLs3boMqbH0z2v/ABGoYdShRar19FZ3pwf+ea/M1yj6o+NeL+K1sTVdavNzm93oltGK0SXJHiBuTGbdAAVAAvhlZMBCLas0Yl8KtuyEm0zNSpcDEqlyAAAAAADMVcDAPUqa5ADygAAAAAAQE4U2yUqaWtyVSN0regnO1lrzAxJrLXTIrnO/YTlciAAAAAAC1K0b2uYjTvYlTmr2AymrXaRCaSVutyWI2+hSAAAAAAASjBslFJK77AKKVye+Wu9yDp8nkYqTzyAzVnfsVgAAAAALIWSvqBCMbmZxt+5KErt9RxOOQFsXlmgUOb5gCIAAAAAi+1k2tQAI063MhUd3kABEAAAAAJQjdgAWwvfLJEKsbaAAVgAAAAAAAuqaK2hilo76AAVswAAAAAykABaqSEo27GABlJLO5S2AAAAH/9k=">
+                    </div>
+                    <div class="row">
+                        <img class="col-4 p-0" src="https://www.rainews.it/cropgd/681x453/dl/img/2022/02/17/1645109430558_rainewsdfeddcbbedfdc.jpg">
+                        <img class="col-4 pr-1 pl-1" src="https://images.pexels.com/photos/1327430/pexels-photo-1327430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                        <img class="col-4 p-0" src="https://images.pexels.com/photos/3208343/pexels-photo-3208343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                    </div>
+                </div>
+
+                <div class="tab-pane bg-secondary" id="post" role="tabpanel" aria-labelledby="post-tab">
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Mi primera foto</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>23 Likes</strong></h6>
+                            <h6> Este es un comentario de varias líneas para hacer pruebas.</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Mi primera foto</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>20 Likes</strong></h6>
+                            <h6>Este es un comentario de varias líneas para hacer pruebas.</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Foto numero 4</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/262438/pexels-photo-262438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>13 Likes</strong></h6>
+                            <h6>Este es un comentario de varias líneas para hacer pruebas.</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Mi primera foto</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>2 Likes</strong></h6>
+                            <h6> Este es un comentario de varias líneas para hacer pruebas</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Mi primera foto</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/1432669/pexels-photo-1432669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>23 Likes</strong></h6>
+                            <h6>Este es un comentario de varias líneas para hacer pruebas.</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+
+                    <div class="container mt-5 col-6 bg-white rounded">
+                        <div class="row p-2 pl-3">
+                            <h4>Foto numero 1 o</h4>
+                            <h5 class="text-secondary pr-0 offset-8">12/14</h5>
+                        </div>
+                        <div class="row">
+                            <img src="https://images.pexels.com/photos/3925557/pexels-photo-3925557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
+                        </div>
+                        <div class="row p-3">
+                            <h6><strong>10 Likes</strong></h6>
+                            <h6>Prueba post feed  Estoy aprendiendo a programar</h6>
+                        </div>
+                        <div class="row p-3">
+                            <i class="fa fa-heart-o text-secondary"></i>
+                            <form>
+                                <input type="text" class="border-0 col-10" placeholder="Comment...">
+                            </form>
+                            <i class="fa fa-ellipsis-v text-secondary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous">
+        </script>
+
+    </body>
+
+</html>
